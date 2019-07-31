@@ -1,0 +1,114 @@
+/*
+    RESET
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*
+    MAIN
+*/
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrp{
+    background: url(img/bg.jpg) no-repeat center;
+    width: 720px;
+    height: 480px;
+    position: relative;
+}
+.cover{
+    background: url(img/cover.png) no-repeat center;
+    width: 720px;
+    height: 480px;
+    position: absolute;
+    z-index: 2;
+}
+svg{
+    opacity: 0.6;
+    z-index: 1;
+    position: absolute;
+    top: 60px;
+    left: 248px;
+    width: 400px;
+    height: 400px;;
+    fill: none;
+    stroke:#44fff0;
+    stroke-dasharray: 2,40;
+    stroke-dashoffset: 0;
+    stroke-width: 16;
+    stroke-linecap: round;
+    transform: rotateX(60deg) rotateY(1deg) rotateZ(-45deg);
+    animation: heart_line 800ms linear 0s infinite;
+}
+@keyframes heart_line {
+    0% { stroke-dashoffset: 42; }
+    100% { stroke-dashoffset: 0; }
+}
+
+
+
+
+
+
+.anm{
+    -webkit-animation-name: flip3D;
+    animation-name: flip3D;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: cubic-bezier(.58, 0, .2, 1);   
+}
+@-webkit-keyframes flip3D
+{
+    /*
+    from {
+        -webkit-transform: rotate3d(0,1,0,-180deg);
+        transform: rotate3d(0,1,0,-180deg);
+        
+    }
+    25% {
+        -webkit-transform: rotate3d(0,0,0,0);
+        transform: rotate3d(0,0,0,0);
+    }
+    to{
+        -webkit-transform: rotate3d(0,0,0,0);
+        transform: rotate3d(0,0,0,0);
+    }
+    */
+}
+@keyframes flip3D
+{
+    from {
+        -webkit-transform: rotate3d(1,1,1,-0deg);
+        transform: rotate3d(1,1,1,-60deg);
+    }
+    /*
+    25% {
+        -webkit-transform: rotate3d(0,0,0,0);
+        transform: rotate3d(0,0,0,0);
+    }
+    */
+    to{
+        -webkit-transform: rotate3d(1,1,1,-0deg);
+        transform: rotate3d(1,1,1,-60deg);
+    }
+}
